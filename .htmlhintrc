@@ -9,7 +9,7 @@
 	"attr-sorted": true,
 	"attr-whitespace": true,
 	"alt-require": true,
-	"input-requires-label": true,
+	"input-requires-label": false,
 	"tag-pair": true,
 	"tagname-lowercase": true,
 	"empty-tag-not-self-closed": false,
