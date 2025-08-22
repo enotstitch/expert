@@ -1,0 +1,82 @@
+{
+	"name": "gulp-fast",
+	"version": "1.0.0",
+	"description": "Gulp — твой незаменимый помощник в веб-разработке! 🚀✨",
+	"main": "gulpfile.js",
+	"type": "module",
+	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build --build",
+		"zip": "gulp deployZip --build",
+		"ftp": "gulp deployFtp --build",
+		"git": "gulp deployGit --build",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"./assets/**/*.html": "htmlhint --config .htmlhintrc",
+		"./assets/**/*.scss": "stylelint --config .stylelintrc",
+		"./assets/**/*.js": "eslint --config eslint.config.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/enotstitch/gulp-fast.git"
+	},
+	"keywords": [
+		"gulp",
+		"html",
+		"scss",
+		"js"
+	],
+	"author": "Anna Kessler",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/enotstitch/gulp-fast/issues"
+	},
+	"homepage": "https://github.com/enotstitch/gulp-fast#readme",
+	"devDependencies": {
+		"@eslint/js": "^9.14.0",
+		"browser-sync": "^3.0.3",
+		"del": "^8.0.0",
+		"dotenv": "^16.4.5",
+		"eslint": "^9.14.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"globals": "^15.12.0",
+		"gulp": "^5.0.0",
+		"gulp-autoprefixer": "^9.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-gh-pages": "^0.5.4",
+		"gulp-group-css-media-queries": "^1.2.2",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-if": "^3.0.0",
+		"gulp-imagemin": "^9.1.0",
+		"gulp-newer": "^1.4.0",
+		"gulp-notify": "^5.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-replace": "^1.1.4",
+		"gulp-size": "^5.0.0",
+		"gulp-svg-sprite": "^2.0.3",
+		"gulp-ttf2woff2": "^5.0.0",
+		"gulp-typograf": "^4.1.0",
+		"gulp-util": "^3.0.8",
+		"gulp-webp": "^5.0.0",
+		"gulp-zip": "^6.0.0",
+		"gulp5-sass-plugin": "^2.0.4",
+		"htmlhint": "^1.1.4",
+		"husky": "^8.0.0",
+		"lint-staged": "^15.2.10",
+		"panini": "^1.7.2",
+		"postcss-scss": "^4.0.9",
+		"prettier": "^3.3.3",
+		"stylelint": "^16.10.0",
+		"stylelint-config-standard-scss": "^13.1.0",
+		"stylelint-order": "^6.0.4",
+		"stylelint-prettier": "^5.0.2",
+		"terser-webpack-plugin": "^5.3.10",
+		"vinyl-ftp": "^0.6.1",
+		"webpack": "^5.96.1",
+		"webpack-cli": "^5.1.4",
+		"webpack-stream": "^7.0.0"
+	}
+}

@@ -1,0 +1,74 @@
+.burger {
+	--burger-time: 0.1s;
+	--burger-width: 40px;
+	--burger-line-height: 4px;
+	--burger-radius: 4px;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: var(--burger-width);
+
+	// * Динамическая высота бургера
+	height: calc(var(--burger-line-height) * 3 + 6px * 2);
+	line-height: var(--burger-line-height);
+
+	&__line {
+		position: relative;
+		border-radius: var(--burger-radius);
+		width: var(--burger-width);
+		height: var(--burger-line-height);
+		background-color: var(--dark-color);
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			display: block;
+			border-radius: var(--burger-radius);
+			width: var(--burger-width);
+			height: var(--burger-line-height);
+			background-color: var(--dark-color);
+			transition:
+				transform var(--burger-time) ease-in,
+				top var(--burger-time) linear var(--burger-time);
+		}
+
+		&::before {
+			top: calc(-1 * (var(--burger-line-height) + 6px));
+		}
+
+		&::after {
+			top: calc(var(--burger-line-height) + 6px);
+		}
+	}
+
+	&--visible {
+		display: flex;
+	}
+
+	&--active {
+		.burger__line {
+			background-color: transparent;
+
+			&::before,
+			&::after {
+				top: 0;
+				transition:
+					top var(--burger-time) linear,
+					transform var(--burger-time) ease-in var(--burger-time);
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}

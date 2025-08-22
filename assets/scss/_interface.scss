@@ -1,0 +1,53 @@
+@use './chunk/burger-menu';
+
+.logo {
+	display: flex;
+	align-items: center;
+
+	&__img {
+		max-width: 200px;
+	}
+}
+
+.menu {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&__body {
+		&--mobile {
+			position: fixed;
+			left: -100%;
+			top: 0;
+			z-index: 5;
+			overflow: auto;
+			padding: 100px 30px 30px;
+			width: 100%;
+			height: 100vh;
+			background-color: var(--accent-color);
+			transition: left 0.3s;
+		}
+
+		&--active {
+			left: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+		&--mobile {
+			flex-direction: column;
+		}
+	}
+
+	&__link {
+		transition: opacity var(--time);
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}

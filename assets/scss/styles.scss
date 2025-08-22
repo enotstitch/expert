@@ -1,0 +1,10 @@
+// * Global styles (Шрифты, переменные)
+@use 'vars';
+@use 'fonts';
+@use 'settings';
+@use 'interface';
+
+// * Main styles
+@use './chunk/header';
+@use './chunk/hero';
+@use './chunk/footer';

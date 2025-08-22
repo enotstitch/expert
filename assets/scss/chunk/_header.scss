@@ -1,0 +1,19 @@
+.header {
+	position: static;
+	z-index: 10;
+	width: 100%;
+	background-color: var(--accent-color);
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	&--sticky {
+		position: sticky;
+		transition: top 0.3s;
+	}
+}
