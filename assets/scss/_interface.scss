@@ -127,8 +127,8 @@
 		height: 15px;
 	}
 
-	&--light {
-		filter: grayscale(1) brightness(1000%);
+	&--light svg {
+		fill: var(--light-color);
 	}
 }
 
