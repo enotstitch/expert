@@ -4,14 +4,15 @@ $mobile-width: 375;
 
 :root {
 	// * Цвета
-	--dark-color: #000;
+	--dark-color: #212123;
 	--light-color: #fbfbfd;
 	--accent-color: #ba122b;
+	--border-color: #e6e6e8;
 	--error-color: #f06464;
 
 	// * Шрифты
 	--font-family: 'Montserrat', sans-serif;
-	--line-height: 120%;
+	--line-height: 1.5;
 
 	// * Визуал
 	--time: 0.2s;
