@@ -74,7 +74,7 @@
 }
 
 .input {
-	outline: 1px solid transparent;
+	outline: 2px solid transparent;
 	border: 1px solid var(--border-color);
 	border-radius: 8px;
 	padding: 12px 15px;
@@ -88,7 +88,7 @@
 }
 
 .submit {
-	border: 1px solid var(--accent-color);
+	border: 2px solid var(--accent-color);
 	border-radius: 30px;
 	padding: 12px 15px;
 	font-weight: 600;
