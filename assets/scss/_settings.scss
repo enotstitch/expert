@@ -39,14 +39,22 @@ body {
 	flex: 1 1 auto;
 }
 
+.section {
+	padding: 120px 0;
+
+	&-request {
+		padding: 60px 0;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: var(--accent-color);
+	}
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: $container-width + px;
-}
-
-.section {
-	padding: 120px 0;
 }
 
 img {
