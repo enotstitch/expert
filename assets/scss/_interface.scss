@@ -45,12 +45,10 @@
 	}
 
 	&__link {
-		font-weight: 700;
-		font-size: 12px;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		color: var(--dark-color);
-		transition: opacity var(--time);
+		font-weight: 600;
+		font-style: normal;
+		font-size: 16px;
+		text-align: center;
 
 		&:hover {
 			opacity: 0.5;
@@ -59,17 +57,24 @@
 }
 
 .link {
-	border-radius: 5px;
+	border: 2px solid var(--accent-color);
+	border-radius: 30px;
 	padding: 15px;
-	font-weight: 700;
-	font-style: normal;
+	min-width: 260px;
+	font-weight: 600;
 	font-size: 16px;
-	color: var(--light-color);
-	background-color: var(--accent-color);
-	transition: filter var(--time);
+	text-align: center;
+	transition:
+		background-color var(--time),
+		color var(--time);
 
 	&:hover {
-		filter: brightness(0.8);
+		color: var(--light-color);
+		background-color: var(--accent-color);
+	}
+
+	@media (max-width: 576px) {
+		width: 100%;
 	}
 }
 
@@ -159,9 +164,29 @@
 
 	&__subtitle {
 		margin: 0;
-		max-width: 350px;
+		max-width: 400px;
 		font-weight: 500;
 		line-height: 1.2;
 		@include adaptive-font(32, 24);
 	}
+
+	&--small-margin {
+		margin-bottom: 25px;
+	}
+
+	@media (max-width: 576px) {
+		margin-bottom: 25px;
+
+		&--small-margin {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.text {
+	margin: 0;
+	font-weight: 500;
+	line-height: var(--line-height);
+	opacity: 0.9;
+	@include adaptive-font(16, 14);
 }
