@@ -39,6 +39,16 @@ body {
 	flex: 1 1 auto;
 }
 
+.section {
+	&-request {
+		padding: 60px 0;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: var(--accent-color);
+	}
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 15px;
