@@ -17,22 +17,7 @@
 		"./assets/**/*.scss": "stylelint --config .stylelintrc",
 		"./assets/**/*.js": "eslint --config eslint.config.js"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/enotstitch/gulp-fast.git"
-	},
-	"keywords": [
-		"gulp",
-		"html",
-		"scss",
-		"js"
-	],
 	"author": "Anna Kessler",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/enotstitch/gulp-fast/issues"
-	},
-	"homepage": "https://github.com/enotstitch/gulp-fast#readme",
 	"devDependencies": {
 		"@eslint/js": "^9.14.0",
 		"browser-sync": "^3.0.3",
