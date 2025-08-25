@@ -186,6 +186,7 @@
 .title {
 	margin: 0;
 	margin-bottom: 25px;
+	max-width: 445px;
 	font-weight: 500;
 	line-height: 1.2;
 	@include adaptive-font(32, 24);
