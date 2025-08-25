@@ -1,0 +1,73 @@
+@use 'mixins/adaptive-font' as *;
+
+.options {
+	&__wrap {
+		margin-bottom: 25px;
+	}
+
+	&__cards {
+		counter-reset: opt;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 20px;
+
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 10px;
+		}
+	}
+
+	&-card {
+		counter-increment: opt;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid rgb(36 36 36 / 10%);
+		border-radius: 4px;
+		padding: 32px 25px;
+		box-shadow: 0 11px 24px 0 rgb(59 61 78 / 5%);
+		background-color: var(--light-color);
+		gap: 25px;
+
+		&__num {
+			display: flex;
+			flex-shrink: 0;
+			align-items: center;
+			justify-content: center;
+			border: 2px solid var(--accent-color);
+			border-radius: 3px;
+			padding: 5px;
+			width: 100%;
+			max-width: 40px;
+			font-weight: 600;
+			@include adaptive-font(18, 14);
+
+			&::before {
+				content: counter(opt, decimal-leading-zero);
+			}
+
+			@media (max-width: 768px) {
+				margin-bottom: 10px;
+			}
+		}
+
+		&__title {
+			display: flex;
+			align-items: center;
+			margin: 0;
+			height: 100%;
+			font-weight: 600;
+			line-height: 1.6;
+			@include adaptive-font(18, 7);
+
+			@media (max-width: 768px) {
+				text-align: center;
+			}
+		}
+
+		@media (max-width: 768px) {
+			align-items: center;
+			padding: 10px 5px;
+			gap: 20px;
+		}
+	}
+}
