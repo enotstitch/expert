@@ -8,10 +8,12 @@
 @use './chunk/header';
 @use './chunk/hero';
 @use './chunk/catalog';
+@use './chunk/services';
 @use './chunk/about';
 @use './chunk/request';
 @use './chunk/contacts';
 @use './chunk/payment';
+@use './chunk/advantages';
 @use './chunk/delivery';
 @use './chunk/not-found';
 @use './chunk/footer';

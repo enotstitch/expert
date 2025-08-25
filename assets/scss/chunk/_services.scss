@@ -1,0 +1,70 @@
+@use 'mixins/adaptive-font' as *;
+
+.services {
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+
+		@media (max-width: 768px) {
+			gap: 10px;
+		}
+	}
+}
+
+.services-card {
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+	border: 1px solid rgb(36 36 36 / 10%);
+	border-radius: 4px;
+	padding: 25px;
+	width: 100%;
+	box-shadow: 0 11px 24px 0 rgb(59 61 78 / 5%);
+	background-color: var(--light-color);
+	transition: transform var(--time);
+
+	&__img {
+		flex-shrink: 0;
+		width: 100%;
+		height: 85px;
+		max-width: 85px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		@media (max-width: 768px) {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		height: 100%;
+		font-weight: 600;
+		line-height: 1.2;
+		color: var(--dark-color);
+		@include adaptive-font(24, 7);
+
+		@media (max-width: 768px) {
+			text-align: center;
+		}
+	}
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	@media (max-width: 992px) {
+		padding: 15px 10px;
+	}
+
+	@media (max-width: 768px) {
+		align-items: center;
+		padding: 10px 5px;
+		gap: 20px;
+	}
+}

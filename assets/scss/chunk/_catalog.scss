@@ -23,6 +23,8 @@
 	border: 1px solid var(--border-color);
 	padding: 10px;
 	padding-bottom: 25px;
+	font-weight: 500;
+	color: var(--dark-color);
 	gap: 25px;
 
 	&__img {
@@ -87,13 +89,17 @@
 			width: 60px;
 			height: 60px;
 		}
+
+		@media (max-width: 576px) {
+			display: none;
+		}
 	}
 
 	&__title {
 		margin: 0;
-		font-weight: 500;
+		font-weight: inherit;
 		text-align: center;
-		color: var(--dark-color);
+		color: currentcolor;
 		transition: transform var(--time);
 		@include adaptive-font(16, 14);
 	}
@@ -123,5 +129,26 @@
 	@media (max-width: 576px) {
 		padding: 5px;
 		padding-bottom: 15px;
+
+		&--plus {
+			grid-column: 1 / -1;
+			margin-top: 40px;
+			border: 2px solid var(--accent-color);
+			border-radius: 30px;
+			padding: 15px;
+			width: 100%;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			text-align: center;
+			transition:
+				color var(--time),
+				background-color var(--time);
+
+			&:hover {
+				color: var(--light-color);
+				background-color: var(--accent-color);
+			}
+		}
 	}
 }
