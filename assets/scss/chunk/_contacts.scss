@@ -34,7 +34,7 @@
 
 	&__inner {
 		display: flex;
-		flex-direction: column;
+		flex-flow: column wrap;
 		align-items: flex-start;
 		gap: 5px 10px;
 
@@ -77,8 +77,19 @@
 		background-color: var(--accent-color);
 		opacity: 0.3;
 
+		&--mobile {
+			display: none;
+			margin-top: 15px;
+			border-radius: 0;
+		}
+
 		@media (max-width: 768px) {
+			display: none;
 			max-width: 100%;
+
+			&--mobile {
+				display: block;
+			}
 		}
 	}
 }
