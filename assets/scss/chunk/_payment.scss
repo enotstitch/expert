@@ -54,6 +54,7 @@
 	}
 
 	&__img {
+		flex-shrink: 0;
 		width: 40px;
 		height: 40px;
 		background-position: center;
@@ -67,6 +68,9 @@
 	}
 
 	&__text {
+		display: flex;
+		align-items: center;
+		height: 100%;
 		font-weight: 600;
 		line-height: var(--line-height);
 		text-align: center;
