@@ -9,18 +9,18 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 10px;
-
-		@media (max-width: 992px) {
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-			gap: 30px 20px;
-		}
 	}
 }
 
 .payment-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px solid var(--border-color);
+	border-top: none;
+	border-radius: 4px;
 	width: 100%;
-	max-width: 385px;
+	max-width: 32%;
 	box-shadow: 0 11px 24px 0 rgb(59 61 78 / 5%);
 
 	&__header {
@@ -33,17 +33,24 @@
 		margin: 0;
 		text-align: center;
 		color: var(--light-color);
+		@include adaptive-font(24, 10);
 	}
 
 	&__content {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		border: 1px solid var(--border-color);
-		border-top: none;
+		justify-content: space-between;
 		border-radius: 0 0 4px 4px;
 		padding: 25px;
+		height: 100%;
 		gap: 25px;
+
+		@media (max-width: 576px) {
+			align-items: center;
+			padding: 10px;
+			gap: 15px;
+		}
 	}
 
 	&__img {
@@ -52,12 +59,18 @@
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
+
+		@media (max-width: 768px) {
+			width: 25px;
+			height: 25px;
+		}
 	}
 
 	&__text {
 		font-weight: 600;
-		line-height: 28.8px;
+		line-height: var(--line-height);
+		text-align: center;
 		color: var(--dark-color);
-		@include adaptive-font(18, 16);
+		@include adaptive-font(18, 10);
 	}
 }
