@@ -3,8 +3,12 @@
 .services {
 	&__cards {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+		grid-template-columns: repeat(4, 1fr);
 		gap: 20px;
+
+		@media (max-width: 768px) {
+			gap: 10px;
+		}
 	}
 }
 
@@ -21,33 +25,46 @@
 	transition: transform var(--time);
 
 	&__img {
-		width: 85px;
+		flex-shrink: 0;
+		width: 100%;
 		height: 85px;
+		max-width: 85px;
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
 
-		@media (max-width: 576px) {
-			width: 64px;
-			height: 64px;
+		@media (max-width: 768px) {
+			width: 32px;
+			height: 32px;
 		}
 	}
 
 	&__title {
+		display: flex;
+		align-items: center;
 		margin: 0;
-		margin-top: auto;
+		height: 100%;
 		font-weight: 600;
 		line-height: 1.2;
 		color: var(--dark-color);
-		@include adaptive-font(24, 16);
+		@include adaptive-font(24, 7);
+
+		@media (max-width: 768px) {
+			text-align: center;
+		}
 	}
 
 	&:hover {
 		transform: translateY(-5px);
 	}
 
-	@media (max-width: 576px) {
-		gap: 25px;
-		padding: 15px;
+	@media (max-width: 992px) {
+		padding: 15px 10px;
+	}
+
+	@media (max-width: 768px) {
+		align-items: center;
+		padding: 10px 5px;
+		gap: 20px;
 	}
 }
