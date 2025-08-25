@@ -69,9 +69,23 @@
 		background-color var(--time),
 		color var(--time);
 
-	&:hover {
+	&:not(.link--bg-red) {
+		&:hover {
+			color: var(--light-color);
+			background-color: var(--accent-color);
+		}
+	}
+
+	&--bg-red {
+		border: none;
+		padding: 17px;
 		color: var(--light-color);
 		background-color: var(--accent-color);
+		transition: filter var(--time);
+
+		&:hover {
+			filter: brightness(0.8);
+		}
 	}
 
 	@media (max-width: 576px) {
