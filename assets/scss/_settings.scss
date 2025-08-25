@@ -37,21 +37,21 @@ body {
 
 .main {
 	flex: 1 1 auto;
+	padding-bottom: 60px;
 }
 
 .section {
-	padding: 120px 0;
+	padding: 60px 0;
 
 	&-request {
-		padding: 60px 0;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: var(--accent-color);
 	}
 
-	&-contacts {
-		padding-bottom: 60px;
+	&:last-child:not(.section-request) {
+		padding-bottom: 0;
 	}
 }
 
