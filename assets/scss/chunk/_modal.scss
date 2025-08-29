@@ -1,0 +1,114 @@
+@use 'mixins/adaptive-font' as *;
+
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden auto;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0 0 0 / 50%);
+	backdrop-filter: blur(8px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all var(--time) ease 0s;
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 10px;
+		min-height: 100%;
+		transition: all var(--time) ease 0s;
+	}
+
+	&__content {
+		position: relative;
+		border-radius: 4px;
+		padding: 30px;
+		max-width: 505px;
+		color: var(--dark-color);
+		background-color: var(--light-color);
+		opacity: 0;
+		transform: scale(0.8);
+		transition: all var(--time) ease 0s;
+	}
+
+	&__close {
+		position: absolute;
+		right: 18px;
+		top: 18px;
+		width: 15px;
+		height: 15px;
+		background-image: url('@img/general/cross.webp');
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		transition: transform var(--time);
+		cursor: pointer;
+
+		&:hover {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 10px;
+		font-weight: 500;
+		line-height: normal;
+		@include adaptive-font(24, 20);
+	}
+
+	&.open {
+		z-index: 15;
+		opacity: 1;
+		visibility: visible;
+
+		.modal__content {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
+
+.modal-form .wpcf7-form p {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.modal-form {
+	&__label {
+		display: flex;
+		flex-direction: column;
+		font-weight: 600;
+		font-size: 14px;
+		gap: 10px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__submit {
+		margin-bottom: 10px;
+	}
+
+	&__policy {
+		display: inline-block;
+		margin: 0 auto;
+		max-width: 200px;
+		font-size: 10px;
+		text-align: center;
+	}
+
+	&__policy-link {
+		color: var(--accent-color);
+
+		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+}

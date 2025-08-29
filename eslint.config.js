@@ -28,9 +28,7 @@ export default [
 			'no-console': 'warn',
 			'no-alert': 'warn',
 			'no-debugger': 'warn',
-			'no-var': 'error',
 			'prefer-const': 'error',
-			'prefer-arrow-callback': 'error',
 		},
 	},
 ];
