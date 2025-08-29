@@ -53,6 +53,15 @@ body {
 	&:last-child:not(.section-request) {
 		padding-bottom: 0;
 	}
+
+	&--hero-bg {
+		background:
+			linear-gradient(0deg, rgb(33 33 35 / 45%) 0%, rgb(33 33 35 / 45%) 100%),
+			url('@img/hero/bg.webp') lightgray no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 
 .container {

@@ -69,11 +69,9 @@
 		background-color var(--time),
 		color var(--time);
 
-	&:not(.link--bg-red) {
-		&:hover {
-			color: var(--light-color);
-			background-color: var(--accent-color);
-		}
+	&:hover {
+		color: var(--light-color);
+		background-color: var(--accent-color);
 	}
 
 	&--bg-red {
@@ -84,6 +82,16 @@
 		transition: filter var(--time);
 
 		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+
+	&--white {
+		border-color: var(--light-color);
+		transition: filter var(--time);
+
+		&:hover {
+			background-color: transparent;
 			filter: brightness(0.8);
 		}
 	}
