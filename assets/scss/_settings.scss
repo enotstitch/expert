@@ -54,6 +54,10 @@ body {
 		padding-bottom: 0;
 	}
 
+	&--padding-big {
+		padding: 120px 0;
+	}
+
 	&--hero-bg {
 		background:
 			linear-gradient(0deg, rgb(33 33 35 / 45%) 0%, rgb(33 33 35 / 45%) 100%),
@@ -68,6 +72,12 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: $container-width + px;
+
+	&--full {
+		padding: 0;
+		width: 100%;
+		max-width: 100%;
+	}
 }
 
 img {
@@ -112,4 +122,15 @@ img {
 
 .is-hidden {
 	display: none;
+}
+
+.is-hidden {
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	width: 0;
+	height: 0;
+	white-space: nowrap;
 }
