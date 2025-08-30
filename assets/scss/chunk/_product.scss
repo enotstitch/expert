@@ -1,0 +1,56 @@
+@use 'mixins/adaptive-font' as *;
+
+.calc {
+	border-radius: 4px;
+	padding: 25px 15px;
+	max-width: 325px;
+	background-color: var(--accent-color);
+
+	&__title {
+		margin-bottom: 10px;
+		font-weight: 600;
+		font-style: normal;
+		color: var(--light-color);
+		@include adaptive-font(24, 16);
+	}
+
+	&__text {
+		margin-bottom: 15px;
+		color: var(--light-color);
+	}
+
+	&__wrap {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 15px;
+		gap: 15px 10px;
+	}
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+		font-weight: 600;
+		font-size: 14px;
+		color: var(--light-color);
+		color: #fbfbfd;
+		gap: 10px;
+	}
+
+	&__input {
+		appearance: textfield;
+		margin: 0;
+		border: 0.705px solid rgb(33 33 35 / 5%);
+		width: 100%;
+		box-shadow: 0.705px 0.705px 7.048px 0 rgb(33 33 50 / 6%) inset;
+		color: var(--dark-color);
+		background-color: var(--light-color);
+
+		&:focus {
+			outline-color: var(--dark-color);
+		}
+
+		&--bold {
+			font-weight: 800;
+		}
+	}
+}
