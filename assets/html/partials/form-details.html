@@ -1,0 +1,217 @@
+<section class="section">
+	<div class="form-details">
+		<div class="container">
+			<h2 class="form-details__title title">
+				Форма заказа распила древесно-плитных материалов
+			</h2>
+		</div>
+
+		<div class="form-details__wrap">
+			<div class="container">
+				<div class="form-details__item form-details-item">
+					<h3 class="form-details-item__title">
+						Выбор деталей и кромки
+					</h3>
+					<div class="form-details-item__card">
+						<div class="form-details-item__inner">
+							<span class="form-details-item__descr">
+								Размер детали указывается готовый!
+							</span>
+						</div>
+
+						<div class="form-details-item__inner">
+							<table class="form-details-item__table form-details-table" cellpadding="0" cellspacing="0">
+								<thead class="form-details-table__head">
+									<tr class="form-details-table__row">
+										<th class="form-details-table__cell" rowspan="2">№</th>
+										<th class="form-details-table__cell" rowspan="2">Тип / Декор</th>
+										<th class="form-details-table__cell" rowspan="2">Толщина</th>
+										<th class="form-details-table__cell" rowspan="2">Длина по волокнам (мм)</th>
+										<th class="form-details-table__cell" rowspan="2">Кромка</th>
+										<th class="form-details-table__cell" rowspan="2">Ширина поперек волокон (мм)</th>
+										<th class="form-details-table__cell" rowspan="2">Кромка</th>
+										<th class="form-details-table__cell" rowspan="2">Кол-во</th>
+										<th class="form-details-table__cell" colspan="1">кв.м</th>
+										<th class="form-details-table__cell" rowspan="2">Примечание</th>
+									</tr>
+									<tr class="form-details-table__row">
+										<th class="form-details-table__cell" colspan="1">площадь</th>
+									</tr>
+								</thead>
+								<tbody class="form-details-table__body">
+									<tr class="form-details-table__row">
+										<td class="form-details-table__cell form-details-table__cell-num"></td>
+										<td class="form-details-table__cell">
+											<input class="input-reset form-details-table__input" name="type" type="text" required="">
+										</td>
+										<td class="form-details-table__cell">
+											<input class="input-reset form-details-table__input" name="thickness" type="text" required="">
+										</td>
+										<td class="form-details-table__cell">
+											<input class="input-reset form-details-table__input" name="length" type="text" required=""
+												data-num="">
+										</td>
+										<td class="form-details-table__cell">
+											<div class="form-details-table__select select">
+												<div class="select__header">
+													<span class="select__current">2,0 мм</span>
+													<svg class="select__icon">
+														<use href="img/icons/sprite.svg#arrow-down"></use>
+													</svg>
+												</div>
+
+												<div class="select__body">
+													<div class="select__item">2,0 мм</div>
+													<div class="select__item">0,4 мм</div>
+												</div>
+												<input class="is-hidden" name="edge1" type="text" required="">
+											</div>
+										</td>
+										<td class="form-details-table__cell">
+											<input class="input-reset form-details-table__input" name="width" type="text" required=""
+												data-num="">
+										</td>
+										<td class="form-details-table__cell">
+											<div class="form-details-table__select select">
+												<div class="select__header">
+													<span class="select__current">2,0 мм</span>
+													<svg class="select__icon">
+														<use href="img/icons/sprite.svg#arrow-down"></use>
+													</svg>
+												</div>
+
+												<div class="select__body">
+													<div class="select__item">2,0 мм</div>
+													<div class="select__item">0,4 мм</div>
+												</div>
+												<input class="is-hidden" name="edge2" type="text" required="">
+											</div>
+										</td>
+										<td class="form-details-table__cell">
+											<input class="input-reset form-details-table__input" name="count" type="text" required=""
+												data-num="">
+										</td>
+										<td class="form-details-table__cell">
+											<input class="input-reset form-details-table__input" name="square" type="text" required=""
+												data-num="">
+										</td>
+										<td class="form-details-table__cell">
+											<input class="input-reset form-details-table__input" name="comment" type="text">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<button class="form-details-item__btn btn-reset">
+								+ Добавить еще деталь
+							</button>
+						</div>
+					</div>
+
+					<div class="form-details-item__fields">
+						<div class="form-details-item__field">
+							<span class="form-details-item__text">Деталей в заказе</span>
+							<output class="form-details-item__output form-details-item__output--piece">1</output>
+						</div>
+						<div class="form-details-item__field">
+							<span class="form-details-item__text">Общая площадь</span>
+							<output class="form-details-item__output form-details-item__output--square">0.00</output>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-details__form">
+					<form>
+						<div class="form-details__item form-details-item">
+							<h3 class="form-details-item__title">
+								Дополнения к заказу
+							</h3>
+
+							<div class="form-details-item__row">
+								<label class="form-details-item__label">
+									Желаемый срок изготовления
+									<input class="form-details-item__input input input-reset" type="date">
+								</label>
+
+								<label class="form-details-item__label">
+									Прикрепить изображение
+									<div class="drop-zone">
+										<span class="drop-zone__text">
+											Прикрепить
+										</span>
+									</div>
+									<input class="is-hidden" id="file-upload" type="file">
+								</label>
+
+								<label class="form-details-item__label" id="select-label">
+									Для менеджера
+
+									<div class="form-details-item__select select">
+										<div class="select__header">
+											<span class="select__current">Любой</span>
+											<svg class="select__icon">
+												<use href="img/icons/sprite.svg#arrow-down"></use>
+											</svg>
+										</div>
+
+										<div class="select__body">
+											<div class="select__item">Любой</div>
+											<div class="select__item">1</div>
+											<div class="select__item">2</div>
+										</div>
+										<input class="is-hidden" type="text">
+									</div>
+
+								</label>
+							</div>
+						</div>
+
+						<div class="form-details__item form-details-item">
+							<h3 class="form-details-item__title">
+								Ваши контакты
+							</h3>
+
+							<div class="form-details-item__row">
+								<label class="form-details-item__label form-details-item__label--width-small">
+									Имя
+									<input class="form-details-item__input input input-reset" type="text">
+								</label>
+
+								<label class="form-details-item__label form-details-item__label--width-small">
+									Телефон
+									<input class="form-details-item__input input input-reset" type="tel">
+								</label>
+
+								<label class="form-details-item__label form-details-item__label--width-small">
+									E-mail
+									<input class="form-details-item__input input input-reset" type="mail">
+								</label>
+
+								<label class="form-details-item__label form-details-item__label--width-small">
+									Компания
+									<input class="form-details-item__input input input-reset" type="text">
+								</label>
+
+								<label class="form-details-item__label form-details-item__label--width-small">
+									Сайт
+									<input class="form-details-item__input input input-reset" type="text">
+								</label>
+							</div>
+						</div>
+
+						<span class="form-details__inner">
+							<input class="form-details__submit submit input-reset" type="submit" value="Отправить">
+							<span class="form-details__policy">
+								Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;<a class="form-details__policy-link link-reset"
+									href="#/">политикой
+									конфиденциальности</a>
+							</span>
+						</span>
+
+						<textarea class="form-details__output is-hidden" name="details"></textarea>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

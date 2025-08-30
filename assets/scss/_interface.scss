@@ -141,6 +141,130 @@
 	}
 }
 
+.drop-zone {
+	position: relative;
+	border: 2px dashed var(--accent-color);
+	border-radius: 8px;
+	padding: 12px 15px;
+	box-shadow: 0.705px 0.705px 7.048px 0 rgb(33 33 50 / 6%);
+	background-color: var(--light-color);
+	cursor: pointer;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		width: 7px;
+		height: 15px;
+		background-image: url('@img/icons/sprite.svg#clip-icon');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translateY(-50%);
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 14px;
+	}
+}
+
+.select {
+	position: relative;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		padding: 12px 15px;
+		box-shadow: 0.705px 0.705px 7.048px 0 rgb(33 33 50 / 6%) inset;
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	&__current {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 10px;
+		height: 6px;
+		transition: transform var(--time);
+	}
+
+	&__body {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		z-index: 2;
+		display: none;
+		border-radius: 8px;
+		background-color: var(--light-color);
+	}
+
+	&__item {
+		padding: 12px 15px;
+		font-size: 16px;
+		line-height: 24px;
+		cursor: pointer;
+	}
+
+	&__item:hover {
+		background-color: #f2f2f2;
+	}
+
+	&.is-active {
+		.select__icon {
+			transform: rotate(180deg);
+		}
+
+		.select__body {
+			display: block;
+		}
+	}
+}
+
+.form-details-table__select {
+	.select__current,
+	.select__item {
+		font-size: inherit;
+	}
+
+	.select__header {
+		border: none;
+		padding: 2px 8px;
+		box-shadow: none;
+		gap: 0 20px;
+	}
+
+	.select__item {
+		padding: 8px;
+		text-align: left;
+	}
+
+	@media (max-width: 576px) {
+		.select__header {
+			flex-direction: column;
+			padding: 5px;
+		}
+
+		.select__icon {
+			width: 6px;
+			height: 2px;
+		}
+
+		.select__item {
+			padding: 5px;
+		}
+	}
+}
+
 .socials {
 	display: flex;
 	align-items: center;
