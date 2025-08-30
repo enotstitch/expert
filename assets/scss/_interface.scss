@@ -215,6 +215,10 @@
 	}
 }
 
+.titles {
+	max-width: 525px;
+}
+
 .title {
 	margin: 0;
 	margin-bottom: 25px;
@@ -432,7 +436,6 @@
 
 .product-card {
 	display: flex;
-	align-items: flex-end;
 	justify-content: space-between;
 	border: 1px solid rgb(36 36 36 / 10%);
 	padding: 15px;
@@ -477,14 +480,74 @@
 		color: var(--accent-color);
 	}
 
-	&__link {
-		padding: 10px;
-		min-width: 0;
-		font-size: 14px;
+	&-controls {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 30px;
 
 		@media (max-width: 992px) {
-			align-self: flex-end;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
 		}
+	}
+
+	&-controls__count {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		font-weight: 500;
+		font-size: 12px;
+		gap: 15px;
+	}
+
+	&-controls__input {
+		appearance: none;
+		appearance: textfield;
+		margin: 0;
+		width: 100%;
+		max-width: 50px;
+		text-align: center;
+		color: var(--dark-color);
+	}
+
+	&__btn {
+		align-self: flex-end;
+		border: 2px solid var(--accent-color);
+		border-radius: 30px;
+		padding: 10px;
+		min-width: 115px;
+		font-weight: 500;
+		font-size: 14px;
+		transition:
+			background-color var(--time),
+			color var(--time);
+
+		&:hover {
+			color: var(--light-color);
+			background-color: var(--accent-color);
+		}
+	}
+
+	&__link {
+		align-self: flex-end;
+		padding: 10px;
+		min-width: 115px;
+		font-weight: 500;
+		font-size: 14px;
+	}
+
+	.list-char {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: normal;
+		opacity: 0.5;
+		gap: 5px;
 	}
 
 	@media (max-width: 992px) {
@@ -492,17 +555,6 @@
 		align-items: flex-start;
 		justify-content: center;
 	}
-}
-
-.list-char {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 15px;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: normal;
-	opacity: 0.5;
-	gap: 5px;
 }
 
 .btn {
@@ -517,8 +569,6 @@
 	background-color: var(--light-grey-color);
 
 	&--filter {
-		margin-top: 25px;
-
 		span {
 			padding-right: calc(15px + 24px);
 			background-image: url('@img/general/filter.webp');
@@ -526,9 +576,9 @@
 			background-size: 24px;
 			background-repeat: no-repeat;
 		}
-	}
 
-	@media (min-width: 992px) {
-		display: none;
+		@media (min-width: 993px) {
+			display: none;
+		}
 	}
 }
