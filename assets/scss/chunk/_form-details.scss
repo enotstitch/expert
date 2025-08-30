@@ -227,6 +227,9 @@
 	}
 
 	&__input {
+		appearance: none;
+		appearance: textfield;
+		margin: 0;
 		outline: 2px solid transparent;
 		padding: 8px;
 		width: 100%;
