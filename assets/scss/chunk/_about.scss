@@ -12,11 +12,4 @@
 		margin-bottom: 30px;
 		max-width: 545px;
 	}
-
-	&__img {
-		/* stylelint-disable-next-line at-rule-empty-line-before */
-		@media (min-width: 577px) {
-			display: none;
-		}
-	}
 }

@@ -47,6 +47,41 @@
 		}
 	}
 
+	&__title {
+		margin: 0;
+		font-weight: inherit;
+		text-align: center;
+		color: currentcolor;
+		@include adaptive-font(16, 14);
+	}
+
+	&:hover {
+		.catalog-card__img {
+			img {
+				scale: 1.1;
+			}
+		}
+	}
+
+	@media (max-width: 576px) {
+		padding: 5px;
+		padding-bottom: 15px;
+	}
+}
+
+.catalog-card-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	border: 1px solid var(--border-color);
+	padding: 10px;
+	padding-bottom: 25px;
+	font-weight: 500;
+	color: var(--dark-color);
+	gap: 40px;
+	@include adaptive-font(16, 14);
+
 	&__show-all {
 		position: relative;
 		display: flex;
@@ -58,7 +93,7 @@
 		height: 80px;
 		font-weight: 300;
 		line-height: normal;
-		color: var(--dark-color);
+		color: currentcolor;
 		transition:
 			background-color var(--time),
 			scale var(--time);
@@ -95,23 +130,8 @@
 		}
 	}
 
-	&__title {
-		margin: 0;
-		font-weight: inherit;
-		text-align: center;
-		color: currentcolor;
-		transition: transform var(--time);
-		@include adaptive-font(16, 14);
-	}
-
 	&:hover {
-		.catalog-card__img {
-			img {
-				scale: 1.1;
-			}
-		}
-
-		.catalog-card__show-all {
+		.catalog-card-btn__show-all {
 			scale: 1.2;
 			background-color: var(--accent-color);
 
@@ -122,33 +142,24 @@
 		}
 	}
 
-	&--plus {
-		gap: 40px;
-	}
-
 	@media (max-width: 576px) {
-		padding: 5px;
-		padding-bottom: 15px;
+		grid-column: 1 / -1;
+		margin-top: 40px;
+		border: 2px solid var(--accent-color);
+		border-radius: 30px;
+		padding: 15px;
+		width: 100%;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		transition:
+			color var(--time),
+			background-color var(--time);
 
-		&--plus {
-			grid-column: 1 / -1;
-			margin-top: 40px;
-			border: 2px solid var(--accent-color);
-			border-radius: 30px;
-			padding: 15px;
-			width: 100%;
-			font-weight: 600;
-			font-size: 16px;
-			line-height: 20px;
-			text-align: center;
-			transition:
-				color var(--time),
-				background-color var(--time);
-
-			&:hover {
-				color: var(--light-color);
-				background-color: var(--accent-color);
-			}
+		&:hover {
+			color: var(--light-color);
+			background-color: var(--accent-color);
 		}
 	}
 }
