@@ -10,37 +10,195 @@
 
 		<section class="layout-section">
 			<div class="product">
-				<div class="product__calc calc" data-height="2" data-lenght="8" data-price="2000" data-weight="5"
-					data-width="9">
-					<h2 class="calc__title title">
-						Калькулятор
-					</h2>
-					<p class="calc__text text">
-						Цена ориентировочная и зависит от объема
-					</p>
-					<div class="calc__wrap">
+				<div class="product__wrap">
+					<div class="product__img">
+						<img src="@img/catalog/img-1.webp" alt="">
+					</div>
+
+					<div class="calc" data-height="2" data-lenght="8" data-price="2000" data-weight="5" data-width="9">
+						<h2 class="calc__title title">
+							Калькулятор
+						</h2>
+						<p class="calc__text text">
+							Цена ориентировочная и зависит от объема
+						</p>
+						<div class="calc__wrap">
+							<label class="calc__label">
+								Кол-во листов
+								<input class="calc__input input input-reset" name="count" type="text">
+							</label>
+							<label class="calc__label">
+								Площадь
+								<input class="calc__input input input-reset" name="square" type="text">
+							</label>
+							<label class="calc__label">
+								Вес
+								<input class="calc__input input input-reset" name="weight" type="text">
+							</label>
+							<label class="calc__label">
+								Объем
+								<input class="calc__input input input-reset" name="volume" type="text">
+							</label>
+						</div>
 						<label class="calc__label">
-							Кол-во листов
-							<input class="calc__input input input-reset" name="count" type="text">
-						</label>
-						<label class="calc__label">
-							Площадь
-							<input class="calc__input input input-reset" name="square" type="text">
-						</label>
-						<label class="calc__label">
-							Вес
-							<input class="calc__input input input-reset" name="weight" type="text">
-						</label>
-						<label class="calc__label">
-							Объем
-							<input class="calc__input input input-reset" name="volume" type="text">
+							Стоимость
+							<input class="calc__input calc__input--bold input input-reset" name="price" type="text">
 						</label>
 					</div>
-					<label class="calc__label">
-						Стоимость
-						<input class="calc__input calc__input--bold input input-reset" name="price" type="text">
-					</label>
 				</div>
+
+				<div class="product__info product-info">
+					<div class="product-info__titles">
+						<h1 class="product-info__title title">
+							ЛДСП 16мм Белый классический
+							<br>
+							<span>(W960 ST7), 2800х2070мм</span>
+						</h1>
+						<p class="text">
+							Ламинированная ДСП толщиной 16 мм, с декором «Белый классический» (W960 ST7), производства Egger.
+						</p>
+					</div>
+
+					<!-- Таблица характеристик продукта -->
+					<table class="product-chars-table">
+						<tbody class="product-chars-table__body">
+							<tr class="product-chars-table__row">
+								<td class="product-chars-table__label">Производитель</td>
+								<td class="product-chars-table__value">Egger</td>
+							</tr>
+							<tr class="product-chars-table__row">
+								<td class="product-chars-table__label">Артикул</td>
+								<td class="product-chars-table__value">W960 ST7</td>
+							</tr>
+							<tr class="product-chars-table__row">
+								<td class="product-chars-table__label">Толщина</td>
+								<td class="product-chars-table__value">16 мм</td>
+							</tr>
+							<tr class="product-chars-table__row">
+								<td class="product-chars-table__label">Габариты</td>
+								<td class="product-chars-table__value">2800x2070 мм</td>
+							</tr>
+							<tr class="product-chars-table__row">
+								<td class="product-chars-table__label">В пачке</td>
+								<td class="product-chars-table__value">16 шт.</td>
+							</tr>
+							<tr class="product-chars-table__row">
+								<td class="product-chars-table__label">Структура поверхности</td>
+								<td class="product-chars-table__value">ST7 — среднезернистая шагрень</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="product__warning warning">Внимание! ЛДСП возврату не подлежит</p>
+
+					<div class="product__decor-thickness decor-thickness">
+						<span class="decor-thickness__label">Другие толщины декора</span>
+						<div class="decor-thickness__values">
+							<span class="decor-thickness__value">8 мм</span>
+							<span class="decor-thickness__value">12 мм</span>
+						</div>
+					</div>
+
+					<div class="product-price">
+						<span class="product-price__label">Цена</span>
+						<span class="product-price__value">7 830,00 руб/лист</span>
+					</div>
+
+					<a class="link modal-link link-reset" href="#modal">Оставить заявку</a>
+				</div>
+
+				<div class="similar-products">
+					<h3 class="similar-products__title">Аналогичные товары</h3>
+					<div class="similar-products__cards product-cards">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<div class="product-card__img">
+									<img src="@img/catalog/product.webp" alt="Столешницы">
+								</div>
+								<div class="product-card__detalies">
+									<h3 class="product-card__title">
+										Столешница Белый (1106 PE), 38 мм
+									</h3>
+
+									<ul class="product-card__list-char list-char list-reset">
+										<li class="list-char__item">
+											Производство - Kaindl
+										</li>
+										<li class="list-char__item">
+											Размеры - 4100 х 600 мм
+										</li>
+									</ul>
+
+									<span class="product-card__price">
+										7 830,00 руб/лист
+									</span>
+								</div>
+							</div>
+							<a class="product-card__link link link--small link-reset" href="#">
+								Посмотреть
+							</a>
+						</div>
+						<div class="product-card">
+							<div class="product-card__inner">
+								<div class="product-card__img">
+									<img src="@img/catalog/product.webp" alt="Столешницы">
+								</div>
+								<div class="product-card__detalies">
+									<h3 class="product-card__title">
+										Столешница Белый (1106 PE), 38 мм
+									</h3>
+
+									<ul class="product-card__list-char list-char list-reset">
+										<li class="list-char__item">
+											Производство - Kaindl
+										</li>
+										<li class="list-char__item">
+											Размеры - 4100 х 600 мм
+										</li>
+									</ul>
+
+									<span class="product-card__price">
+										7 830,00 руб/лист
+									</span>
+								</div>
+							</div>
+							<a class="product-card__link link link--small link-reset" href="#">
+								Посмотреть
+							</a>
+						</div>
+						<div class="product-card">
+							<div class="product-card__inner">
+								<div class="product-card__img">
+									<img src="@img/catalog/product.webp" alt="Столешницы">
+								</div>
+								<div class="product-card__detalies">
+									<h3 class="product-card__title">
+										Столешница Белый (1106 PE), 38 мм
+									</h3>
+
+									<ul class="product-card__list-char list-char list-reset">
+										<li class="list-char__item">
+											Производство - Kaindl
+										</li>
+										<li class="list-char__item">
+											Размеры - 4100 х 600 мм
+										</li>
+									</ul>
+
+									<span class="product-card__price">
+										7 830,00 руб/лист
+									</span>
+								</div>
+							</div>
+							<a class="product-card__link link link--small link-reset" href="#">
+								Посмотреть
+							</a>
+						</div>
+					</div>
+
+					<a class="link link--small link-reset" href="#">Все товары</a>
+				</div>
+
 			</div>
 		</section>
 	</div>

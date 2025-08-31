@@ -105,6 +105,13 @@
 		}
 	}
 
+	&--small {
+		padding: 10px 25px;
+		min-width: 150px;
+		font-weight: 500;
+		font-size: 14px;
+	}
+
 	@media (max-width: 576px) {
 		width: 100%;
 	}
@@ -657,10 +664,6 @@
 
 	&__link {
 		align-self: flex-end;
-		padding: 10px;
-		min-width: 115px;
-		font-weight: 500;
-		font-size: 14px;
 	}
 
 	.list-char {
@@ -705,4 +708,15 @@
 			display: none;
 		}
 	}
+}
+
+.warning {
+	margin: 0;
+	border-radius: 4px;
+	padding: 13px 15px;
+	max-width: fit-content;
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--light-color);
+	background-color: var(--accent-color);
 }
