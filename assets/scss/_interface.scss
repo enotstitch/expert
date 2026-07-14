@@ -211,7 +211,9 @@
 		top: 100%;
 		z-index: 2;
 		display: none;
+		margin-top: 2px;
 		border-radius: 8px;
+		box-shadow: 0 8px 24px rgb(33 33 50 / 12%);
 		background-color: var(--light-color);
 	}
 

@@ -10,7 +10,19 @@ export const initSelect = function (el = document) {
 		item.addEventListener('click', selectChoose);
 	});
 
-	function selectToggle() {
+	// закрытие по клику вне селекта
+	document.addEventListener('click', (e) => {
+		const allSelects = el.querySelectorAll('.select.is-active');
+
+		allSelects.forEach((select) => {
+			if (!select.contains(e.target)) {
+				select.classList.remove('is-active');
+			}
+		});
+	});
+
+	function selectToggle(e) {
+		e.stopPropagation(); // чтобы клик по хедеру не долетал сразу до document и не закрывал только что открытый select
 		this.parentElement.classList.toggle('is-active');
 	}
 
